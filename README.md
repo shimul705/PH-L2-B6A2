@@ -29,6 +29,31 @@ A complete and production-ready vehicle rental management backend built with Nod
 | Validation      | Manual validation           |
 | Deployment      | Vercel                      |
 
+
+##Setup & Run Locally
+
+```bash 
+# Clone the repo
+git clone https://github.com/shimul705/PH-L2-B6A2.git
+cd PH-L2-B6A2
+
+# Install dependencies
+npm install
+
+# Create .env file
+cp .env.example .env
+
+# Add your PostgreSQL connection string
+# Example:
+# DATABASE_URL=postgresql://username:password@localhost:5432/vehicle_rental
+
+# Start development server
+npm run dev
+
 ### Dependencies
 ```bash
 express pg bcryptjs jsonwebtoken dotenv typescript
+
+
+
+
