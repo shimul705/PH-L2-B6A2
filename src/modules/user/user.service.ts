@@ -40,8 +40,8 @@ export const updateUser = async (userId: number, userData: IUpdateUserRequest): 
         throw new Error("Invalid email format");
     }
 
-    if (phone && phone.length < 10) {
-        throw new Error("Phone number must be at least 10 characters long");
+    if (phone && phone.length < 11) {
+        throw new Error("Phone number must be at least 11 characters long");
     }
 
     if (role && !['admin', 'customer'].includes(role)) {

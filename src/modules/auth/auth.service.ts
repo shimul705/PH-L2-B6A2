@@ -21,8 +21,8 @@ export const createUser = async (userData: ISignupRequest): Promise<IUser> => {
         throw new Error("Password must be at least 6 characters long");
     }
 
-    if (!phone || phone.length < 10) {
-        throw new Error("Phone number must be at least 10 characters long");
+    if (!phone || phone.length < 11) {
+        throw new Error("Phone number must be at least 11 characters long");
     }
 
     const userRole = role || 'customer';

@@ -16,7 +16,7 @@ export const initDB = async () => {
                 name VARCHAR(250) NOT NULL CHECK (LENGTH(name) >= 2),
                 email VARCHAR(150) UNIQUE NOT NULL CHECK (email ~* '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$'),
                 password VARCHAR(255) NOT NULL CHECK (LENGTH(password) >= 6),
-                phone VARCHAR(255) NOT NULL CHECK (LENGTH(phone) >= 10),
+                phone VARCHAR(255) NOT NULL CHECK (LENGTH(phone) >= 11),
                 role VARCHAR(50) NOT NULL CHECK (role IN ('admin', 'customer'))
             )
         `);
