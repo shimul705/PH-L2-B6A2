@@ -57,3 +57,23 @@ express pg bcryptjs jsonwebtoken dotenv typescript
 
 
 
+# Key API Endpoints
+
+| Method | Endpoint                        | Access                  | Description                                      |
+|--------|---------------------------------|-------------------------|--------------------------------------------------|
+| POST   | `/api/v1/auth/signup`           | Public                  | Register new user                                |
+| POST   | `/api/v1/auth/signin`           | Public                  | Login and get JWT token                          |
+|        |                                 |                         |                                                  |
+| GET    | `/api/v1/vehicles`              | Public                  | Get all vehicles                                 |
+| GET    | `/api/v1/vehicles/:vehicleId`   | Public                  | Get vehicle by ID                                |
+| POST   | `/api/v1/vehicles`              | Admin only              | Add new vehicle                                  |
+| PUT    | `/api/v1/vehicles/:vehicleId`   | Admin only              | Update vehicle                                   |
+| DELETE | `/api/v1/vehicles/:vehicleId`   | Admin only              | Delete vehicle (if no active bookings)           |
+|        |                                 |                         |                                                  |
+| GET    | `/api/v1/users`                 | Admin only              | Get all users                                    |
+| PUT    | `/api/v1/users/:userId`         | Admin or Self           | Update user profile                              |
+| DELETE | `/api/v1/users/:userId`         | Admin only              | Delete user (if no active bookings)              |
+|        |                                 |                         |                                                  |
+| POST   | `/api/v1/bookings`              | Customer or Admin       | Create new booking                               |
+| GET    | `/api/v1/bookings`              | Customer → own<br>Admin → all | View bookings                              |
+| PUT    | `/api/v1/bookings/:bookingId`   | Customer or Admin       | Customer: cancel booking<br>Admin: mark as returned |
