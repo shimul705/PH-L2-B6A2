@@ -162,7 +162,7 @@ curl -X POST {{baseURL}}/api/v1/auth/signin \
     "email": "user@example.com",
     "password": "password123"
   }'
-
+```
 ---
 
 ## 📋 Database Schema
