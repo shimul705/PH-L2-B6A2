@@ -266,7 +266,7 @@ PH-L2-B6A2/
 
 ---
 
-## 🔄 Auto-Return Scheduler
+## 🔄 Auto Return Scheduler
 
 The system includes a background scheduler that automatically marks bookings as "returned" when the rental end date passes. This runs:
 
