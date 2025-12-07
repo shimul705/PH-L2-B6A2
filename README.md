@@ -143,25 +143,26 @@ All protected endpoints require a JWT token in the `Authorization` header:
 Authorization: Bearer <your_jwt_token>
 ```
 
-Obtain a token by logging in:
+Obtain a token by admin logging in:
 
 ```bash
-curl -X POST http://localhost:5000/api/v1/auth/signin \
+curl -X POST http://localhost:5000/api/v1/auth/signin \ or {{baseURL}}/api/v1/auth/signin
   -H "Content-Type: application/json" \
   -d '{
-    "email": "user@example.com",
-    "password": "password123"
-  }'
+  "email": "admin@example.com",
+  "password": "admin123"
+}'
 ```
-logging in as admin
+
+Obtain a token by Customer logging in:
+
 ```bash
-curl -X POST {{baseURL}}/api/v1/auth/signin \
+curl -X POST http://localhost:5000/api/v1/auth/signin \ or {{baseURL}}/api/v1/auth/signin
   -H "Content-Type: application/json" \
-  -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiZW1haWwiOiJhZG1pbkBleGFtcGxlLmNvbSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTc2NTA5NDAwMiwiZXhwIjoxNzY1Njk4ODAyfQ.fG4X3KSpNrFSXJGDh3r7WahXJtRdijeGyuwkjBc406c \
   -d '{
-    "email": "user@example.com",
-    "password": "password123"
-  }'
+  "email": "shimulgub1@gmail.com",
+  "password": "Shimul@1243"
+}'
 ```
 ---
 
